@@ -1,11 +1,15 @@
-
+import Header from "./components/Header/Header"
+import Card from "./components/Card/Card"
 function App() {
   
 
   return (
     <>
       
-      <h1 className="text-6xl bg-yellow-300">Course</h1>
+      <div className="container mx-auto">
+      <Header></Header>
+      <Card></Card>
+      </div>
      
       
     </>

@@ -1,0 +1,57 @@
+
+// import PropTypes from 'prop-types';
+// import { data } from 'autoprefixer';
+import { useEffect } from 'react';
+import { useState } from 'react';
+
+const Card = () => {
+    const [courses,setCourses] = useState([])
+    useEffect(()=>{
+        fetch('data.json')
+        .then(res=> res.json())
+        .then(data=>setCourses(data));
+        
+    },[]);
+    return (
+        <div>
+            <div className='w-3/4 grid grid-cols-3 gap-10'>
+                {
+                    courses.map((course) => (
+                        <div
+                          key={course.id}
+                          className="card w-72 bg-base-100 shadow-lg mt-6 pt-4 pb-4"
+                        >
+                          <div className="m-2 ">
+                            <img
+                              src={course.img}
+                            />
+                            <div className="m-1">
+                              <h2 className='font-semibold mt-2 text-[#1C1B1B] text-lg'>{course.course_name}</h2>
+                              <p className='text-gray-400 text-left mt-2 '>{course.details}</p>
+                            </div>
+                            <div className="flex gap-4 mt-4 ">
+                              <img src="src/assets/dollar-sign 1.png" alt="" />
+                              <p className='text-gray-400'>Price : {course.price}</p>
+                              <img src="src/assets/Frame.png" alt="" />
+                              <p className='text-gray-400'>Credit: {course.credit}hr</p>
+                            </div>
+                            <button
+                              
+                              className="btn mt-4 bg-blue-400 pl-28 pr-28 rounded-lg  text-white "
+                            >
+                              Select
+                            </button>
+                          </div>
+                        </div>
+                    ))}
+                
+            </div>
+        </div>
+    );
+};
+
+Card.propTypes = {
+    
+};
+
+export default Card;
