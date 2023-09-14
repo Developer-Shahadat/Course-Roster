@@ -37,13 +37,13 @@ const Card = () => {
                             </div>
                             <button
                               
-                              className="btn mt-4 bg-blue-400 pl-28 pr-28 rounded-lg  text-white "
+                              className="btn mt-4 bg-blue-500 pl-28 pr-28 rounded-lg  text-white hover:bg-blue-400 "
                             >
                               Select
                             </button>
                           </div>
                         </div>
-                    ))}
+                    ))};
                 
             </div>
         </div>
