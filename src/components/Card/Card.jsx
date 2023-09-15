@@ -6,9 +6,10 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 const Card = ({handleSelect}) => {
+  // Use State 
     const [courses,setCourses] = useState([])
     
-   
+  //  Use Effect
     useEffect(()=>{
         fetch('data.json')
         .then(res=> res.json())
@@ -22,6 +23,7 @@ const Card = ({handleSelect}) => {
             <div className='grid grid-cols-3 gap-10'>
                 {
                     courses.map((course) => (
+                      // Card Add
                         <div
                           key={course.id}
                           className="card w-72 bg-base-100 shadow-lg mt-6 pt-4 pb-4"

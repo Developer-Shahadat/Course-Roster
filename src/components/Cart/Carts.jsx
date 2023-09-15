@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 const Carts = ({cartAdd,totalCredit,remaining,totalPrice}) => {
     return (
         <div className="">
+            {/* Card Add */}
             <div className="mt-8 card  bg-base-100 shadow-lg pt-4 pb-4">
                 <div className="mx-4">
                     <h3 className='text-[#2F80ED] font-bold'>Credit Hour Remaining  {remaining} hr</h3>
@@ -13,12 +14,6 @@ const Carts = ({cartAdd,totalCredit,remaining,totalPrice}) => {
                         </Cart>{index+1}. {cartAdd.course_name}</ol>
                            )
                     }
-
-                    {/* {cartAdd.map((course, index) => (
-                        <ol key={index} className='mt-1'>
-                            {index + 1}. <Cart course={course}>{course.course_name}</Cart>
-                        </ol>
-                    ))} */}
                     <hr className="mt-4"/>
                     <h3 className='font-medium mt-2'>Total Credit Hour : {totalCredit}</h3>
                     <hr className='mt-2' />
