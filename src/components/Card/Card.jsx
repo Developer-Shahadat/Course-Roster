@@ -26,7 +26,7 @@ const Card = ({handleSelect}) => {
                       // Card Add
                         <div
                           key={course.id}
-                          className="card w-72 bg-base-100 shadow-lg mt-6 pt-4 pb-4"
+                          className="card lg:w-72 bg-base-100 shadow-lg mt-6 pt-4 pb-4"
                         >
                           <div className="m-2 ">
                             <img
