@@ -1,20 +1,25 @@
 
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // import { data } from 'autoprefixer';
+
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-const Card = () => {
+const Card = ({handleSelect}) => {
     const [courses,setCourses] = useState([])
+    
+   
     useEffect(()=>{
         fetch('data.json')
         .then(res=> res.json())
         .then(data=>setCourses(data));
         
     },[]);
+
+      
     return (
         <div>
-            <div className='w-3/4 grid grid-cols-3 gap-10'>
+            <div className='grid grid-cols-3 gap-10'>
                 {
                     courses.map((course) => (
                         <div
@@ -36,7 +41,7 @@ const Card = () => {
                               <p className='text-gray-400'>Credit: {course.credit}hr</p>
                             </div>
                             <button
-                              
+                              onClick={() => handleSelect(course)}
                               className="btn mt-4 bg-blue-500 pl-28 pr-28 rounded-lg  text-white hover:bg-blue-400 "
                             >
                               Select
@@ -46,12 +51,13 @@ const Card = () => {
                     ))};
                 
             </div>
+            
         </div>
     );
 };
 
 Card.propTypes = {
-    
+    handleSelect : PropTypes.func.isRequired
 };
 
 export default Card;
