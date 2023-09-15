@@ -20,7 +20,7 @@ const Card = ({handleSelect}) => {
       
     return (
         <div>
-            <div className='grid grid-cols-3 gap-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
                     courses.map((course) => (
                       // Card Add
@@ -44,7 +44,7 @@ const Card = ({handleSelect}) => {
                             </div>
                             <button
                               onClick={() => handleSelect(course)}
-                              className="btn mt-4 bg-blue-500 pl-28 pr-28 rounded-lg  text-white hover:bg-blue-400 "
+                              className="btn mt-4 bg-blue-500 md:pl-28 pl-20 pr-20 md:pr-28 rounded-lg  text-white hover:bg-blue-400 "
                             >
                               Select
                             </button>
