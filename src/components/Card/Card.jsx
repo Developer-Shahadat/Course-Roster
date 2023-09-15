@@ -37,9 +37,9 @@ const Card = ({handleSelect}) => {
                               <p className='text-gray-400 text-left mt-2 '>{course.details}</p>
                             </div>
                             <div className="flex gap-4 mt-4 ">
-                              <img src="src/assets/dollar-sign 1.png" alt="" />
+                              <img src="https://i.ibb.co/jVqFz61/dollar-sign-1.png" alt="" />
                               <p className='text-gray-400'>Price : {course.price}</p>
-                              <img src="src/assets/Frame.png" alt="" />
+                              <img src="https://i.ibb.co/xDcpHGV/Frame.png" alt="" />
                               <p className='text-gray-400'>Credit: {course.credit}hr</p>
                             </div>
                             <button
